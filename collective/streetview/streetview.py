@@ -23,17 +23,16 @@ class IStreetView(form.Schema):
     Information about Google StreetView
     """
 
+    streetview_settings = schema.Text(
+        title=_(u'streetview_settings', default="StreetView settings"),
+        description=_(u'streetview_description', default="Add StreetView settings as a JSON string."),
+        required=False
+    )
 
 @implementer(IStreetView)
 class StreetView(Container):
     """Convenience subclass for ``StreetView`` portal type
     """
-    streetview_settings = schema.Text(
-        title=_(u'streetview_settings', default="StreetView settings"),
-        description=_(u'streetview_description', default="Add StreetView settings as a JSON string.")
-        required=False
-    )
-
 
 class StreetViewView(DefaultView):
     pass

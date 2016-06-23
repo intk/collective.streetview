@@ -34,9 +34,9 @@
     
   <browser:page
         name="view"
-        for="collective.streetview.object.IStreetView"
-        class="collective.streetview.object.StreetViewView"
-        template="object_templates/view.pt"
+        for="collective.streetview.streetview.IStreetView"
+        class="collective.streetview.streetview.StreetViewView"
+        template="streetview_templates/view.pt"
         permission="zope2.View"
         />
 
